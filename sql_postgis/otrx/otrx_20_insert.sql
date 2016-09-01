@@ -1,9 +1,5 @@
-﻿/*DocTekus/dtgdb/dtcode*/
-/*ALENO*/
-/*CREATION DE LA STRUCTURE DE OTgdb*/
-/*Licence : GNU GPLv3*/
-/*20/02/2015 - stephane.byache AT aleno DOT eu : CREATION DU SCRIPT*/
-/*23/08/2016 - stephane.byache AT aleno DOT eu */
+﻿/*OpenTelcos/otrx*/
+/*24/08/2016 - SBY - stephane.byache AT aleno DOT eu : CREATION DU SCRIPT */
 /*24/08/2016 - SBY : passage de DocTekus à OpenTelcos + PostgreSQL*/
 /*Cible PostgreSQL 9*/
 

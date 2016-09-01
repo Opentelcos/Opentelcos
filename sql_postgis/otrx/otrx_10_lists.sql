@@ -1,10 +1,5 @@
 ﻿/*OpenTelcos/otrx*/
-/*Version : 0.0.3*/
-/*ALENO*/
-/*CREATION DE LA STRUCTURE DE DTcode.sqlite*/
-/*Licence : GNU GPLv3*/
-/*20/02/2015 - SBY - aleno.eu : CREATION DU SCRIPT (DocTekus/dtgdb/dtcode)*/
-/*03/03/2015 - SBY : Modifications multiples */
+/*24/08/2016 - SBY - stephane.byache AT aleno DOT eu : CREATION DU SCRIPT */
 /*24/08/2016 - SBY : passage de DocTekus à OpenTelcos + PostgreSQL*/
 /*Cible PostgreSQL 9*/
 
