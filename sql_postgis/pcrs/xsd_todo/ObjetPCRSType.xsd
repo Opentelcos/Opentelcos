@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:gml="http://www.opengis.net/gml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://localhost/pcrs" targetNamespace="http://localhost/pcrs">
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xs:include schemaLocation="ThematiquePCRS.xsd"/>
+	<xs:include schemaLocation="QualiteCategorisation.xsd"/>
+	<xs:include schemaLocation="ClassePrecisionPCRS.xsd"/>
+	<xs:complexType name="ObjetPCRSType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="idObjet" type="xs:string"/>
+					<xs:element name="thematique" type="ThematiquePCRS"/>
+					<xs:element name="calque" type="xs:string"/>
+					<xs:element name="qualiteCategorisation" type="QualiteCategorisation"/>
+					<xs:element name="precision">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="precisionPlanimetrique" type="ClassePrecisionPCRS"/>
+								<xs:element name="precisionAltimetrique" type="ClassePrecisionPCRS" minOccurs="0"/>
+								<xs:element name="precisionTotale" type="ClassePrecisionPCRS" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:gml="http://www.opengis.net/gml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://localhost/pcrs" targetNamespace="http://localhost/pcrs">
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xs:include schemaLocation="ClassePrecisionPCRS.xsd"/>
+	<xs:element name="FeatureCollection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="gml:boundedBy"/>
+				<xs:element name="featureMember" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:complexContent>
+							<xs:extension base="gml:AbstractFeatureType">
+								<xs:sequence>
+									<xs:element name="geometrie">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element ref="gml:Curve"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="numeroPoint" type="xs:string"/>
+									<xs:element name="horodatage" type="xs:date" minOccurs="0"/>
+									<xs:element name="precisionXY" type="xs:integer">
+										<xs:annotation>
+											<xs:documentation>precision planimétrique exprimée en mm</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="precisionZ" type="xs:integer">
+										<xs:annotation>
+											<xs:documentation>precision altimétrique exprimée en mm</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:extension>
+						</xs:complexContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

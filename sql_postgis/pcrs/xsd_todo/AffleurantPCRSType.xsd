@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:gml="http://www.opengis.net/gml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://localhost/pcrs" targetNamespace="http://localhost/pcrs">
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xs:include schemaLocation="ClassePrecisionPCRS.xsd"/>
+	<xs:include schemaLocation="NatureAffleurant.xsd"/>
+	<xs:include schemaLocation="CodeCouleurAffleurant.xsd"/>
+	<xs:complexType name="AffleurantPCRSType" abstract="true">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="idAffleurant" type="xs:string"/>
+					<xs:element name="gestionnaire" type="xs:string" minOccurs="0"/>
+					<xs:element name="nature" type="NatureAffleurant">
+						<xs:annotation>
+							<xs:documentation>spécifié par gestionnaire du PCRS</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="codeCouleur" type="CodeCouleurAffleurant"/>
+					<xs:element name="calque" type="xs:string"/>
+					<xs:element name="idSource" type="xs:string" minOccurs="0"/>
+					<xs:element name="source" type="xs:string" minOccurs="0"/>
+					<xs:element name="precision">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="precisionPlanimetrique" type="ClassePrecisionPCRS"/>
+								<xs:element name="precisionAltimetrique" type="ClassePrecisionPCRS" minOccurs="0"/>
+								<xs:element name="precisionTotale" type="ClassePrecisionPCRS" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

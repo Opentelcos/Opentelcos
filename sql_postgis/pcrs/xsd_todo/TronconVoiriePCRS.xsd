@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:pcrs="http://xml.standards.fr/cnig/pcrs" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xml.standards.fr/cnig/pcrs" elementFormDefault="qualified" version="1.0">
+	<import xmlns="" namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+	<element name="TronconVoiriePCRS" type="pcrs:TronconVoiriePCRSType" substitutionGroup="gml:AbstractFeature"/>
+	<xs:complexType name="TronconVoiriePCRSType"/>
+	<complexType name="TronconVoiriePCRSType">
+		<complexContent>
+			<extension base="gml:AbstractFeatureType">
+				<sequence>
+					<element name="geometrie" type="gml:CurvePropertyType"/>
+					<element name="source" type="string"/>
+					<element name="reference" type="string"/>
+					<element name="propriete" type="pcrs:ProprieteEspaceType" minOccurs="0"/>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+</schema>

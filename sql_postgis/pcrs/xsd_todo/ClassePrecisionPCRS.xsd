@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="ClassePrecisionPCRS">
+		<xs:annotation>
+			<xs:documentation>Liste énumérée de valeurs décrivant la classe de précision associée à un objet du PCRS</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="002">
+				<xs:annotation>
+					<xs:documentation>moins de 2 cm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="005">
+				<xs:annotation>
+					<xs:documentation>de 2 à 5 cm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="010">
+				<xs:annotation>
+					<xs:documentation>de 5 à 10 cm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="040">
+				<xs:annotation>
+					<xs:documentation>de 10 à 40 cm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="150">
+				<xs:annotation>
+					<xs:documentation>de 40 à 150 cm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="999">
+				<xs:annotation>
+					<xs:documentation>au delà de 150 cm</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

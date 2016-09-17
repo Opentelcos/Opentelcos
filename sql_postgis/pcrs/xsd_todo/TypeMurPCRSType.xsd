@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="TypeMurPCRSType">
+		<xs:annotation>
+			<xs:documentation>Liste énumérée permettant de décrire le type de mur.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01">
+				<xs:annotation>
+					<xs:documentation>Ouvrage de maçonnerie qui s'élève verticalement sur une certaine longueur et qui sert à enclore, à séparer des espaces.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="02">
+				<xs:annotation>
+					<xs:documentation>Ouvrage de maçonnerie qui s'élève obliquement sur une certaine longueur et qui sert à supporter une poussée.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="03">
+				<xs:annotation>
+					<xs:documentation>Mur de faible hauteur (muret, murette) servant de clôture qui ne masque pas la vue</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="04">
+				<xs:annotation>
+					<xs:documentation>Mur de faible hauteur (muret, murette) servant de clôture, qui ne masque pas la vue, et monté d'une grille ou de grillage.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="05">
+				<xs:annotation>
+					<xs:documentation>Mur de faible hauteur (muret, murette) servant de de parapet, qui ne masque pas la vue.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

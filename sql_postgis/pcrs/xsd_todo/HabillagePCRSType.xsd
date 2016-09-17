@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:gml="http://www.opengis.net/gml" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://localhost/pcrs" targetNamespace="http://localhost/pcrs">
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+	<xs:include schemaLocation="ThematiquePCRS.xsd"/>
+	<xs:include schemaLocation="PlacementPCRS.xsd"/>
+	<xs:complexType name="HabillagePCRSType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+					<xs:element name="geometrie" type="gml:GeometryPropertyType"/>
+					<xs:element name="idHabillage" type="xs:string"/>
+					<xs:element name="thematique" type="ThematiquePCRS"/>
+					<xs:element name="calque" type="xs:string"/>
+					<xs:element name="positionnement" type="PlacementPCRS"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

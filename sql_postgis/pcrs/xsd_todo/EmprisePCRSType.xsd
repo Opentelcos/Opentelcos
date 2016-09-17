@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="EmprisePCRSType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01"><xs:annotation><xs:documentation>Couloir</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="02"><xs:annotation><xs:documentation>Operation</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="03"><xs:annotation><xs:documentation>Carreau</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="04"><xs:annotation><xs:documentation>LimiteAdministrative</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="05"><xs:annotation><xs:documentation>Raster</xs:documentation></xs:annotation></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

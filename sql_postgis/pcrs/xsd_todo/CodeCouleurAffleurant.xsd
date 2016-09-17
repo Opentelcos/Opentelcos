@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="CodeCouleurAffleurant">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Rouge">
+				<xs:annotation>
+					<xs:documentation>Electricité BT, HTA ou HTB, éclairage, signalisation routière et feux tricolores</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Jaune">
+				<xs:annotation>
+					<xs:documentation>Gaz combustible (transport ou distribution) et Hydrocarbures</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Orange">
+				<xs:annotation>
+					<xs:documentation>Produits chimiques</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Bleu">
+				<xs:annotation>
+					<xs:documentation>Eau potable</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Marron">
+				<xs:annotation>
+					<xs:documentation>Assainissement et Pluvial</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Violet">
+				<xs:annotation>
+					<xs:documentation>Chauffage et Climatisation</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Vert">
+				<xs:annotation>
+					<xs:documentation>Communications électroniques et électricité TBT</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Rose">
+				<xs:annotation>
+					<xs:documentation>Emprise multi-réseaux</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Blanc">
+				<xs:annotation>
+					<xs:documentation>Non défini</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

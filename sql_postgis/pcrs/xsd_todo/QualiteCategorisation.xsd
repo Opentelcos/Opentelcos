@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="QualiteCategorisation">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01"><xs:annotation><xs:documentation>Conforme PCRS</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="02"><xs:annotation><xs:documentation>Import ERDF</xs:documentation></xs:annotation></xs:enumeration>
+			<xs:enumeration value="03"><xs:annotation><xs:documentation>Selon CCTP avant 2015 PCRS v1</xs:documentation></xs:annotation></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -102,6 +102,30 @@ CREATE TABLE IF NOT EXISTS t_mask(
  
  
 /*####################################################*/
+/*Zone de compétence - zone d'une DSP par exmeple*/
+CREATE TABLE IF NOT EXISTS t_zcompet(
+	zc_code VARCHAR(254) NOT NULL PRIMARY KEY,
+	zc_nom VARCHAR(254),
+	zc_mo VARCHAR(254), --REFERENCE t_organisme --Maître d'ouvrage
+	zc_me VARCHAR(254), --REFERENCE t_organisme --Maître d'oeuvre
+	--dates
+	geom public.geometry(MultiPolygon,2154)
+);
+
+CREATE INDEX t_zcompet_geom_gist ON t_zcompet USING GIST (geom); 
+
+
+/*Communes d'une zone de compétence*/
+CREATE TABLE IF NOT EXISTS t_zcompet_comm(
+	zm_code VARCHAR(254) NOT NULL PRIMARY KEY,
+	zm_insee VARCHAR(10), --code INSEE
+	zm_nom VARCHAR(254), --nom commune
+	--source
+	--date
+	geom public.geometry(MultiPolygon,2154)
+);
+
+CREATE INDEX t_zcompet_comm_geom_gist ON t_zcompet_comm USING GIST (geom); 
 	
 /*REFERENCEMENTS*/
 CREATE TABLE IF NOT EXISTS t_referencement (

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="TypeBordurePCRSType">
+		<xs:annotation>
+			<xs:documentation>-- Name --
+TypeBordurePCRS
+-- Definition --
+Liste énumérée permettant de décrire le type de bordure utilisée en voirie.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="01"/>
+			<xs:enumeration value="02"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
