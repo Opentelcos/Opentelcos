@@ -14,7 +14,7 @@ Les schémas de bases de données :
 * pcrs : [EXEMPLE PARTIEL, DEV EN COURS] Données conformes au géostandard CNIG/Covadis Plan de corps de rue simplifié
 * cadastrefr : [EXTRAIT MCD PLUGIN Cadastre QGIS de 3Liz, UTILISER LE PLUGIN] Cadastre français (DGFiP - PCI-Vecteur + MagicIII) via le plugin cadastre QGIS de 3Liz
 
-
 Sources : 
-GraceTHD-MCD v2.0 (GPLv3) : https://github.com/GraceTHD-community/GraceTHD-MCD
-PCRS (CNIG) partiel : 
+* GraceTHD-MCD v2.0 (GPLv3) : https://github.com/GraceTHD-community/GraceTHD-MCD
+* PCRS (CNIG) partiel : http://cnig.gouv.fr/?page_id=11745
+* Cadastre fr : https://github.com/3liz/QgisCadastrePlugin
