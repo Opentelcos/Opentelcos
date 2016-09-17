@@ -1,7 +1,7 @@
 # Opentelcos
 Open source ecosystem for modeling telecommunications networks. 
 
-Not operational - Currently in initialization phase. 
+**Not operational - Currently in initialization phase.**
 
 Les schémas de bases de données : 
 * ot : OpenTelcos, tables transverses (configuration, identification de personnes et de rôles, référencement d'organismes selon des types d'opérations, ...). 
@@ -18,3 +18,4 @@ Sources :
 * GraceTHD-MCD v2.0 (GPLv3) : https://github.com/GraceTHD-community/GraceTHD-MCD
 * PCRS (CNIG) partiel : http://cnig.gouv.fr/?page_id=11745
 * Cadastre fr : https://github.com/3liz/QgisCadastrePlugin
+* OSM France - Openfla : https://www.data.gouv.fr/fr/datasets/limites-administratives-francaises-issues-d-openstreetmap/
