@@ -22,4 +22,3 @@ Sources :
 * Cadastre fr : https://github.com/3liz/QgisCadastrePlugin
 * OSM France - Openfla : https://www.data.gouv.fr/fr/datasets/limites-administratives-francaises-issues-d-openstreetmap/
 * BaseAdresseNationale : https://adresse.data.gouv.fr/
-* 
