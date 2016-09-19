@@ -1,0 +1,45 @@
+@ECHO OFF
+
+:VARIABLES
+REM MODIFIER CHEMIN VERS exécutable spatialite.exe (sous gracelite par exemple)
+SET SPLEX=D:\apps_portables_free\spatialite42\spatialite.exe
+SET GLV=v20
+SET SPLDB=..\db_spatialite\gracethd_%GLV%.sqlite
+REM SET SHPDB=.\shpcsv-in\
+
+:BASE
+ECHO GRACELITE - SUPPRESSION BASE
+IF EXIST %SPLDB% DEL /s %SPLDB%
+
+ECHO GRACELITE - CREATION BASE
+ECHO GRACELITE - FOREIGN_KEYS = ON
+%SPLEX% -silent %SPLDB% "PRAGMA foreign_keys = ON;"
+
+:CONNECTSHP
+
+
+:SCHEMA
+ECHO GRACELITE - CREATION DE LA STRUCTURE DE LA BASE DE DONNEES
+ECHO GRACELITE - CREATION DES LISTES
+SET FSQL=gracethd_10_lists.sql
+%SPLEX% -silent %SPLDB% < %FSQL%
+ECHO GRACELITE - INSERT VALEURS DANS LES LISTES
+SET FSQL=gracethd_20_insert.sql
+%SPLEX% -silent %SPLDB% < %FSQL%
+ECHO GRACELITE - CREATION DES TABLES
+SET FSQL=gracethd_30_tables.sql
+%SPLEX% -silent %SPLDB% < %FSQL%
+ECHO GRACELITE - AJOUT DES CHAMPS GEOMETRIQUES
+SET FSQL=gracethd_40_spatialite.sql
+%SPLEX% -silent %SPLDB% < %FSQL%
+ECHO GRACELITE - AJOUT DES INDEX
+SET FSQL=gracethd_50_index.sql
+%SPLEX% -silent %SPLDB% < %FSQL%
+ECHO GRACELITE - AJOUT DES SPECIFICITES
+SET FSQL=gracethd_90_labo.sql
+%SPLEX% -silent %SPLDB% < %FSQL%
+
+:INSERTSHP
+
+
+PAUSE
