@@ -4,7 +4,7 @@ Open source ecosystem for modeling telecommunications networks.
 **Not operational - Currently in initialization phase.**
 
 Les schémas de bases de données : 
-* ot : OpenTelcos, tables transverses (configuration, identification de personnes et de rôles, référencement d'organismes selon des types d'opérations, ...). 
+* ot : OpenTelcos, tables transverses. 
 * otrx : [DEBUG] Gestion de référencements d'infrastructures télécoms et suivi de projet élémentaire. 
 * otpe : [DEV EN COURS] Personnes physiques et morales. 
 * otcg : [DEV A INITIALISER] Catalogage d'équipements. 
